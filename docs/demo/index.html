@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>mini_sglang · 单卡推理实验台</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eff3ed;color:#172e2a;font:16px/1.55 "Segoe UI","Microsoft YaHei",sans-serif}main{max-width:900px;margin:5vh auto;padding:28px}header,footer{display:flex;justify-content:space-between;align-items:center;gap:16px}a{color:#176253}header{border-bottom:1px solid #b6c7bc;padding-bottom:14px;font-family:Consolas,monospace}h1{font-size:clamp(32px,6vw,58px);letter-spacing:-.055em;margin:24px 0 0}p{margin:4px 0 22px}section{background:white;padding:24px;border:1px solid #becec3;border-radius:12px}select{width:100%;font:inherit;color:inherit;padding:9px;border:1px solid #98b3a3;border-radius:5px;background:white}h2{font-size:18px;margin:24px 0 8px}.row{display:grid;grid-template-columns:92px 1fr 85px;align-items:center;gap:10px;margin:10px 0}.track{background:#edf1eb;border-radius:4px;overflow:hidden}.bar{height:20px;background:#216c5a}.serial{background:#879c8f}output,strong{font-variant-numeric:tabular-nums}dl{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;border-top:1px solid #d9e2db;padding-top:16px;margin:20px 0 0}dd{margin:3px 0;font:bold 27px/1.3 Consolas,monospace}footer{margin-top:14px;font-size:14px}@media(max-width:550px){main{margin:0;padding:16px}section{padding:15px}dl{grid-template-columns:1fr}footer{flex-wrap:wrap}}
+</style>
+<main><header><b>mini_sglang</b><a href="https://github.com/ililyiv0414-source/mini_sglang">GitHub ↗</a></header>
+<h1>单卡推理实验台</h1><p>回放 A800 上的 Qwen3-0.6B 实测结果，观察批处理如何改变吞吐与排队延迟。</p>
+<section><label for="load"><b>请求负载</b> · 短请求生成 8 个 token，长请求生成 34 个</label>
+<select id="load"><option value="4-balanced">4 个请求 · 长短各半</option><option value="16-balanced" selected>16 个请求 · 长短各半</option><option value="32-balanced">32 个请求 · 长短各半</option><option value="16-short-heavy">16 个请求 · 75% 短请求</option><option value="16-long-heavy">16 个请求 · 75% 长请求</option></select>
+<div aria-live="polite"><h2>输出吞吐 <small>tokens/s</small></h2>
+<div class="row">逐请求执行<div class="track"><div id="bar1" class="bar serial"></div></div><strong id="s"></strong></div>
+<div class="row">批量执行<div class="track"><div id="bar2" class="bar"></div></div><strong id="b"></strong></div>
+<dl><div><dt>吞吐倍数</dt><dd id="gain"></dd></div><div><dt>平均 decode 批大小</dt><dd id="width"></dd></div><div><dt>峰值接纳请求数</dt><dd id="peak"></dd></div></dl>
+<h2>P95 首 token 延迟（含排队）</h2><span id="latency"></span></div></section>
+<footer><span>64 MiB KV 预算 · 所有请求同时到达 · 四轮中位数</span><a href="https://github.com/ililyiv0414-source/mini_sglang/blob/main/artifacts/workload-sweep.json">原始样本 ↗</a></footer></main>
+<script src="results.js"></script><script>
+const el = id => document.getElementById(id);
+const ceiling = Math.max(...Object.values(results).map(r => r.batched.output_tok_s));
+function render(){
+ const r=results[el("load").value];
+ for(const [mode,id,bar] of [["serial","s","bar1"],["batched","b","bar2"]]){
+  const rate=r[mode].output_tok_s;
+  el(id).textContent=rate.toFixed(2); el(bar).style.width=(100*rate/ceiling)+"%";
+ }
+ el("gain").textContent=r.speedup.toFixed(2)+"×";
+ el("width").textContent=r.batched.mean_decode_width.toFixed(2);
+ el("peak").textContent=r.batched.peak_admitted;
+ el("latency").textContent="逐请求 "+r.serial.p95_ttft_s.toFixed(3)+" s → 批量 "+r.batched.p95_ttft_s.toFixed(3)+" s";
+}
+el("load").addEventListener("change",render); render();
+</script></html>
