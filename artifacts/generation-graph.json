@@ -1,0 +1,205 @@
+{
+  "setup_including_warmup_and_capture_ms": 2022.473283112049,
+  "gpu": "NVIDIA A800-SXM4-80GB",
+  "torch": "2.6.0+cu124",
+  "capacity": 128,
+  "dtype": "bf16",
+  "cases": [
+    {
+      "prompt": "What is the capital of France? Answer briefly.",
+      "generated_ids": [
+        785,
+        6722,
+        315,
+        9625,
+        374,
+        12095,
+        13,
+        151645
+      ],
+      "exact_logits": true,
+      "samples": {
+        "graph": [
+          {
+            "reset_prefill_first_ms": 20.482610911130905,
+            "decode_ms": 39.40576687455177,
+            "total_ms": 59.88837778568268
+          },
+          {
+            "reset_prefill_first_ms": 20.528096705675125,
+            "decode_ms": 39.18050229549408,
+            "total_ms": 59.708599001169205
+          },
+          {
+            "reset_prefill_first_ms": 20.573992282152176,
+            "decode_ms": 36.62146255373955,
+            "total_ms": 57.195454835891724
+          },
+          {
+            "reset_prefill_first_ms": 20.618975162506104,
+            "decode_ms": 36.62404790520668,
+            "total_ms": 57.243023067712784
+          },
+          {
+            "reset_prefill_first_ms": 20.622871816158295,
+            "decode_ms": 36.66362911462784,
+            "total_ms": 57.28650093078613
+          },
+          {
+            "reset_prefill_first_ms": 20.568273961544037,
+            "decode_ms": 36.61761060357094,
+            "total_ms": 57.185884565114975
+          }
+        ],
+        "eager": [
+          {
+            "reset_prefill_first_ms": 21.05385810136795,
+            "decode_ms": 134.49108600616455,
+            "total_ms": 155.5449441075325
+          },
+          {
+            "reset_prefill_first_ms": 21.882884204387665,
+            "decode_ms": 134.67228040099144,
+            "total_ms": 156.5551646053791
+          },
+          {
+            "reset_prefill_first_ms": 20.695064216852188,
+            "decode_ms": 134.507954120636,
+            "total_ms": 155.20301833748817
+          },
+          {
+            "reset_prefill_first_ms": 20.55998519062996,
+            "decode_ms": 134.12123546004295,
+            "total_ms": 154.6812206506729
+          },
+          {
+            "reset_prefill_first_ms": 20.58613672852516,
+            "decode_ms": 136.6187259554863,
+            "total_ms": 157.20486268401146
+          },
+          {
+            "reset_prefill_first_ms": 20.574524998664856,
+            "decode_ms": 134.33950766921043,
+            "total_ms": 154.9140326678753
+          }
+        ]
+      },
+      "median_total_ms": {
+        "graph": 57.26476199924946,
+        "eager": 155.37398122251034
+      },
+      "speedup": 2.7132563866160266
+    },
+    {
+      "prompt": "Explain the purpose of a KV cache in one sentence.",
+      "generated_ids": [
+        785,
+        84648,
+        6500,
+        374,
+        264,
+        943,
+        315,
+        4938,
+        6500,
+        1483,
+        311,
+        3553,
+        13814,
+        24758,
+        821,
+        311,
+        7269,
+        5068,
+        553,
+        17719,
+        279,
+        1372,
+        315,
+        3039,
+        821,
+        3880,
+        311,
+        387,
+        30403,
+        504,
+        1887,
+        4938,
+        13,
+        151645
+      ],
+      "exact_logits": true,
+      "samples": {
+        "graph": [
+          {
+            "reset_prefill_first_ms": 20.631879568099976,
+            "decode_ms": 174.6055893599987,
+            "total_ms": 195.23746892809868
+          },
+          {
+            "reset_prefill_first_ms": 20.799007266759872,
+            "decode_ms": 172.3019927740097,
+            "total_ms": 193.10100004076958
+          },
+          {
+            "reset_prefill_first_ms": 21.154094487428665,
+            "decode_ms": 172.39709943532944,
+            "total_ms": 193.5511939227581
+          },
+          {
+            "reset_prefill_first_ms": 20.663999021053314,
+            "decode_ms": 172.40413278341293,
+            "total_ms": 193.06813180446625
+          },
+          {
+            "reset_prefill_first_ms": 20.60806378722191,
+            "decode_ms": 171.82465642690659,
+            "total_ms": 192.4327202141285
+          },
+          {
+            "reset_prefill_first_ms": 21.090246737003326,
+            "decode_ms": 171.67123034596443,
+            "total_ms": 192.76147708296776
+          }
+        ],
+        "eager": [
+          {
+            "reset_prefill_first_ms": 20.88651806116104,
+            "decode_ms": 635.6306150555611,
+            "total_ms": 656.5171331167221
+          },
+          {
+            "reset_prefill_first_ms": 20.882584154605865,
+            "decode_ms": 632.8789256513119,
+            "total_ms": 653.7615098059177
+          },
+          {
+            "reset_prefill_first_ms": 20.55930346250534,
+            "decode_ms": 637.3884454369545,
+            "total_ms": 657.9477488994598
+          },
+          {
+            "reset_prefill_first_ms": 21.246492862701416,
+            "decode_ms": 636.035580188036,
+            "total_ms": 657.2820730507374
+          },
+          {
+            "reset_prefill_first_ms": 20.648177713155746,
+            "decode_ms": 632.4411891400814,
+            "total_ms": 653.0893668532372
+          },
+          {
+            "reset_prefill_first_ms": 20.612578839063644,
+            "decode_ms": 635.6297358870506,
+            "total_ms": 656.2423147261143
+          }
+        ]
+      },
+      "median_total_ms": {
+        "graph": 193.0845659226179,
+        "eager": 656.3797239214182
+      },
+      "speedup": 3.3994416942909567
+    }
+  ]
+}

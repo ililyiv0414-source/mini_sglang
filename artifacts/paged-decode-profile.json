@@ -1,0 +1,149 @@
+{
+  "gpu": "NVIDIA A800-SXM4-80GB",
+  "torch": "2.6.0+cu124",
+  "decode_steps": 8,
+  "profiled_steps": 2,
+  "cases": [
+    {
+      "input_length": 128,
+      "modes": {
+        "contiguous": {
+          "ms_per_token": [
+            19.215900916606188,
+            19.430363550782204,
+            19.27162380889058,
+            19.205124117434025,
+            19.607921596616507,
+            19.0907153300941
+          ],
+          "median_ms_per_token": 19.243762362748384,
+          "profile": {
+            "aten::index_select": {
+              "count": 2,
+              "cuda_total_us": 7.2960000000020955
+            },
+            "aten::index_copy_": {
+              "count": 0,
+              "cuda_total_us": 0
+            }
+          }
+        },
+        "paged": {
+          "ms_per_token": [
+            20.344480872154236,
+            20.525268744677305,
+            20.363351330161095,
+            20.39575669914484,
+            20.230214577168226,
+            20.283525343984365
+          ],
+          "median_ms_per_token": 20.353916101157665,
+          "profile": {
+            "aten::index_select": {
+              "count": 114,
+              "cuda_total_us": 564.3150000000401
+            },
+            "aten::index_copy_": {
+              "count": 112,
+              "cuda_total_us": 432.87099999999737
+            }
+          }
+        }
+      }
+    },
+    {
+      "input_length": 512,
+      "modes": {
+        "contiguous": {
+          "ms_per_token": [
+            26.158964727073908,
+            25.523489341139793,
+            25.65987966954708,
+            25.436402298510075,
+            25.392682291567326,
+            25.361464824527502
+          ],
+          "median_ms_per_token": 25.479945819824934,
+          "profile": {
+            "aten::index_select": {
+              "count": 2,
+              "cuda_total_us": 8.192999999996346
+            },
+            "aten::index_copy_": {
+              "count": 0,
+              "cuda_total_us": 0
+            }
+          }
+        },
+        "paged": {
+          "ms_per_token": [
+            26.99819626286626,
+            26.96384536102414,
+            26.981173548847437,
+            26.83292981237173,
+            26.998155284672976,
+            26.899147778749466
+          ],
+          "median_ms_per_token": 26.97250945493579,
+          "profile": {
+            "aten::index_select": {
+              "count": 114,
+              "cuda_total_us": 1249.685000000005
+            },
+            "aten::index_copy_": {
+              "count": 112,
+              "cuda_total_us": 542.5890000000127
+            }
+          }
+        }
+      }
+    },
+    {
+      "input_length": 1024,
+      "modes": {
+        "contiguous": {
+          "ms_per_token": [
+            25.46755690127611,
+            25.807148311287165,
+            25.45176912099123,
+            25.506716687232256,
+            25.61580901965499,
+            25.64838621765375
+          ],
+          "median_ms_per_token": 25.561262853443623,
+          "profile": {
+            "aten::index_select": {
+              "count": 2,
+              "cuda_total_us": 7.7759999999971114
+            },
+            "aten::index_copy_": {
+              "count": 0,
+              "cuda_total_us": 0
+            }
+          }
+        },
+        "paged": {
+          "ms_per_token": [
+            27.189559303224087,
+            27.25066477432847,
+            27.31278818100691,
+            27.13079657405615,
+            26.975275948643684,
+            27.343193534761667
+          ],
+          "median_ms_per_token": 27.22011203877628,
+          "profile": {
+            "aten::index_select": {
+              "count": 114,
+              "cuda_total_us": 1797.4860000000417
+            },
+            "aten::index_copy_": {
+              "count": 112,
+              "cuda_total_us": 440.0960000000173
+            }
+          }
+        }
+      }
+    }
+  ]
+}

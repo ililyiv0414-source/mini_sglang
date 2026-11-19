@@ -1,0 +1,1310 @@
+{
+  "torch": "2.6.0+cu124",
+  "triton": "3.2.0",
+  "gpu": "NVIDIA A800-SXM4-80GB",
+  "calls_per_sample": 100,
+  "notes": "5 rotated-order samples; all JIT warmed before measurement. Enqueue wall time includes Python, allocation, dispatch and possible backpressure, not pure CPU compute. CUDA event span includes device idle gaps; not pure kernel runtime. cProfile collected after all timing samples. No model speedup claim.",
+  "sources": {
+    "/huhaifeng2/ljl/sgl/scripts/ablate_rmsnorm_overhead.py": "02875ea548ea5a69c50346c3421e5fed1cba21540b130d3daf284eff84445989",
+    "/huhaifeng2/ljl/sgl/mini_engine/rmsnorm.py": "b8cf9d84592f91249a3ff66e8ff1931343854b5745e917a6e198df1ccd0f0746"
+  },
+  "cases": [
+    {
+      "shape": [
+        1,
+        1024
+      ],
+      "exact_correctness": true,
+      "samples": [
+        {
+          "enqueue_us_per_call": 55.91206252574921,
+          "wall_us_per_call": 56.325457990169525,
+          "cuda_span_us_per_call": 56.21856212615967,
+          "variant": "torch",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 101.54835879802704,
+          "wall_us_per_call": 101.92621499300003,
+          "cuda_span_us_per_call": 101.78560256958008,
+          "variant": "production",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 102.17145085334778,
+          "wall_us_per_call": 102.53164917230606,
+          "cuda_span_us_per_call": 102.38975524902344,
+          "variant": "controlled_full",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 96.70667350292206,
+          "wall_us_per_call": 97.01184928417206,
+          "cuda_span_us_per_call": 96.89087867736816,
+          "variant": "no_checks",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 91.02273732423782,
+          "wall_us_per_call": 91.33800864219666,
+          "cuda_span_us_per_call": 91.19744300842285,
+          "variant": "no_guard",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 87.16847747564316,
+          "wall_us_per_call": 87.48341351747513,
+          "cuda_span_us_per_call": 87.34720230102539,
+          "variant": "neither",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 99.95922446250916,
+          "wall_us_per_call": 100.25855153799057,
+          "cuda_span_us_per_call": 100.1369571685791,
+          "variant": "production",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 100.04919022321701,
+          "wall_us_per_call": 100.34400969743729,
+          "cuda_span_us_per_call": 100.2291202545166,
+          "variant": "controlled_full",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 96.13994508981705,
+          "wall_us_per_call": 96.43401950597763,
+          "cuda_span_us_per_call": 96.30720138549805,
+          "variant": "no_checks",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 91.51708334684372,
+          "wall_us_per_call": 91.8247178196907,
+          "cuda_span_us_per_call": 91.68895721435547,
+          "variant": "no_guard",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 87.00087666511536,
+          "wall_us_per_call": 87.33205497264862,
+          "cuda_span_us_per_call": 87.193603515625,
+          "variant": "neither",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 55.38534373044968,
+          "wall_us_per_call": 55.67304790019989,
+          "cuda_span_us_per_call": 55.562238693237305,
+          "variant": "torch",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 99.72721338272095,
+          "wall_us_per_call": 100.03212839365005,
+          "cuda_span_us_per_call": 99.91168022155762,
+          "variant": "controlled_full",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 95.29851377010345,
+          "wall_us_per_call": 95.59642523527145,
+          "cuda_span_us_per_call": 95.46751976013184,
+          "variant": "no_checks",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 90.27868509292603,
+          "wall_us_per_call": 90.59343487024307,
+          "cuda_span_us_per_call": 90.46015739440918,
+          "variant": "no_guard",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 85.99497377872467,
+          "wall_us_per_call": 86.30521595478058,
+          "cuda_span_us_per_call": 86.16959571838379,
+          "variant": "neither",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 54.899975657463074,
+          "wall_us_per_call": 55.187977850437164,
+          "cuda_span_us_per_call": 55.08096218109131,
+          "variant": "torch",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 98.85545819997787,
+          "wall_us_per_call": 99.21357035636902,
+          "cuda_span_us_per_call": 99.09248352050781,
+          "variant": "production",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 95.23801505565643,
+          "wall_us_per_call": 95.536969602108,
+          "cuda_span_us_per_call": 95.40608406066895,
+          "variant": "no_checks",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 90.00096470117569,
+          "wall_us_per_call": 90.3041660785675,
+          "cuda_span_us_per_call": 90.1734447479248,
+          "variant": "no_guard",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 86.32216602563858,
+          "wall_us_per_call": 86.62689477205276,
+          "cuda_span_us_per_call": 86.49727821350098,
+          "variant": "neither",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 55.23569881916046,
+          "wall_us_per_call": 55.516138672828674,
+          "cuda_span_us_per_call": 55.408639907836914,
+          "variant": "torch",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 98.179392516613,
+          "wall_us_per_call": 98.47473353147507,
+          "cuda_span_us_per_call": 98.35519790649414,
+          "variant": "production",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 98.8548994064331,
+          "wall_us_per_call": 99.1489365696907,
+          "cuda_span_us_per_call": 99.02079582214355,
+          "variant": "controlled_full",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 90.07804095745087,
+          "wall_us_per_call": 90.38403630256653,
+          "cuda_span_us_per_call": 90.2451229095459,
+          "variant": "no_guard",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 86.13921701908112,
+          "wall_us_per_call": 86.44446730613708,
+          "cuda_span_us_per_call": 86.31296157836914,
+          "variant": "neither",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 54.966285824775696,
+          "wall_us_per_call": 55.245161056518555,
+          "cuda_span_us_per_call": 55.13216018676758,
+          "variant": "torch",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 98.58217090368271,
+          "wall_us_per_call": 98.87859225273132,
+          "cuda_span_us_per_call": 98.75455856323242,
+          "variant": "production",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 98.62899780273438,
+          "wall_us_per_call": 98.92668575048447,
+          "cuda_span_us_per_call": 98.80576133728027,
+          "variant": "controlled_full",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 95.10334581136703,
+          "wall_us_per_call": 95.3960046172142,
+          "cuda_span_us_per_call": 95.2729606628418,
+          "variant": "no_checks",
+          "repeat": 4
+        }
+      ],
+      "summary": {
+        "torch": {
+          "wall_us_per_call": {
+            "median": 55.516138672828674,
+            "min": 55.187977850437164,
+            "max": 56.325457990169525
+          },
+          "enqueue_us_per_call": {
+            "median": 55.23569881916046,
+            "min": 54.899975657463074,
+            "max": 55.91206252574921
+          },
+          "cuda_span_us_per_call": {
+            "median": 55.408639907836914,
+            "min": 55.08096218109131,
+            "max": 56.21856212615967
+          }
+        },
+        "production": {
+          "wall_us_per_call": {
+            "median": 99.21357035636902,
+            "min": 98.47473353147507,
+            "max": 101.92621499300003
+          },
+          "enqueue_us_per_call": {
+            "median": 98.85545819997787,
+            "min": 98.179392516613,
+            "max": 101.54835879802704
+          },
+          "cuda_span_us_per_call": {
+            "median": 99.09248352050781,
+            "min": 98.35519790649414,
+            "max": 101.78560256958008
+          }
+        },
+        "controlled_full": {
+          "wall_us_per_call": {
+            "median": 100.03212839365005,
+            "min": 98.92668575048447,
+            "max": 102.53164917230606
+          },
+          "enqueue_us_per_call": {
+            "median": 99.72721338272095,
+            "min": 98.62899780273438,
+            "max": 102.17145085334778
+          },
+          "cuda_span_us_per_call": {
+            "median": 99.91168022155762,
+            "min": 98.80576133728027,
+            "max": 102.38975524902344
+          }
+        },
+        "no_checks": {
+          "wall_us_per_call": {
+            "median": 95.59642523527145,
+            "min": 95.3960046172142,
+            "max": 97.01184928417206
+          },
+          "enqueue_us_per_call": {
+            "median": 95.29851377010345,
+            "min": 95.10334581136703,
+            "max": 96.70667350292206
+          },
+          "cuda_span_us_per_call": {
+            "median": 95.46751976013184,
+            "min": 95.2729606628418,
+            "max": 96.89087867736816
+          }
+        },
+        "no_guard": {
+          "wall_us_per_call": {
+            "median": 90.59343487024307,
+            "min": 90.3041660785675,
+            "max": 91.8247178196907
+          },
+          "enqueue_us_per_call": {
+            "median": 90.27868509292603,
+            "min": 90.00096470117569,
+            "max": 91.51708334684372
+          },
+          "cuda_span_us_per_call": {
+            "median": 90.46015739440918,
+            "min": 90.1734447479248,
+            "max": 91.68895721435547
+          }
+        },
+        "neither": {
+          "wall_us_per_call": {
+            "median": 86.62689477205276,
+            "min": 86.30521595478058,
+            "max": 87.48341351747513
+          },
+          "enqueue_us_per_call": {
+            "median": 86.32216602563858,
+            "min": 85.99497377872467,
+            "max": 87.16847747564316
+          },
+          "cuda_span_us_per_call": {
+            "median": 86.49727821350098,
+            "min": 86.16959571838379,
+            "max": 87.34720230102539
+          }
+        }
+      }
+    },
+    {
+      "shape": [
+        1,
+        1,
+        16,
+        128
+      ],
+      "exact_correctness": true,
+      "samples": [
+        {
+          "enqueue_us_per_call": 56.49939179420471,
+          "wall_us_per_call": 56.822262704372406,
+          "cuda_span_us_per_call": 56.71743869781494,
+          "variant": "torch",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 99.64071214199066,
+          "wall_us_per_call": 99.95877742767334,
+          "cuda_span_us_per_call": 99.81951713562012,
+          "variant": "production",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 99.93895888328552,
+          "wall_us_per_call": 100.24894028902054,
+          "cuda_span_us_per_call": 100.11648178100586,
+          "variant": "controlled_full",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 96.1131602525711,
+          "wall_us_per_call": 96.41148149967194,
+          "cuda_span_us_per_call": 96.28671646118164,
+          "variant": "no_checks",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 90.88091552257538,
+          "wall_us_per_call": 91.18769317865372,
+          "cuda_span_us_per_call": 91.0643196105957,
+          "variant": "no_guard",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 86.8113711476326,
+          "wall_us_per_call": 87.11755275726318,
+          "cuda_span_us_per_call": 86.99904441833496,
+          "variant": "neither",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 99.45753961801529,
+          "wall_us_per_call": 99.75925087928772,
+          "cuda_span_us_per_call": 99.62495803833008,
+          "variant": "production",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 99.44424033164978,
+          "wall_us_per_call": 99.7384637594223,
+          "cuda_span_us_per_call": 99.61471557617188,
+          "variant": "controlled_full",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 96.33373469114304,
+          "wall_us_per_call": 96.62941098213196,
+          "cuda_span_us_per_call": 96.51200294494629,
+          "variant": "no_checks",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 91.14328771829605,
+          "wall_us_per_call": 91.44719690084457,
+          "cuda_span_us_per_call": 91.3203239440918,
+          "variant": "no_guard",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 87.01961487531662,
+          "wall_us_per_call": 87.32404559850693,
+          "cuda_span_us_per_call": 87.193603515625,
+          "variant": "neither",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 56.46567791700363,
+          "wall_us_per_call": 56.763626635074615,
+          "cuda_span_us_per_call": 56.647682189941406,
+          "variant": "torch",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 99.9542698264122,
+          "wall_us_per_call": 100.25642812252045,
+          "cuda_span_us_per_call": 100.1369571685791,
+          "variant": "controlled_full",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 114.28266763687134,
+          "wall_us_per_call": 114.59510773420334,
+          "cuda_span_us_per_call": 114.47296142578125,
+          "variant": "no_checks",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 91.17688983678818,
+          "wall_us_per_call": 91.48851037025452,
+          "cuda_span_us_per_call": 91.35104179382324,
+          "variant": "no_guard",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 87.19809353351593,
+          "wall_us_per_call": 87.50610053539276,
+          "cuda_span_us_per_call": 87.37792015075684,
+          "variant": "neither",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 56.2063604593277,
+          "wall_us_per_call": 56.49358034133911,
+          "cuda_span_us_per_call": 56.38144016265869,
+          "variant": "torch",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 99.16912764310837,
+          "wall_us_per_call": 99.46472942829132,
+          "cuda_span_us_per_call": 99.33823585510254,
+          "variant": "production",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 96.1264967918396,
+          "wall_us_per_call": 96.42433375120163,
+          "cuda_span_us_per_call": 96.29695892333984,
+          "variant": "no_checks",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 90.9227505326271,
+          "wall_us_per_call": 91.2293791770935,
+          "cuda_span_us_per_call": 91.10527992248535,
+          "variant": "no_guard",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 87.88872510194778,
+          "wall_us_per_call": 88.2139801979065,
+          "cuda_span_us_per_call": 88.0844783782959,
+          "variant": "neither",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 56.34967237710953,
+          "wall_us_per_call": 56.648291647434235,
+          "cuda_span_us_per_call": 56.52480125427246,
+          "variant": "torch",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 99.38281029462814,
+          "wall_us_per_call": 99.68176484107971,
+          "cuda_span_us_per_call": 99.55327987670898,
+          "variant": "production",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 100.6123423576355,
+          "wall_us_per_call": 100.91360658407211,
+          "cuda_span_us_per_call": 100.79232215881348,
+          "variant": "controlled_full",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 90.5538722872734,
+          "wall_us_per_call": 90.86333215236664,
+          "cuda_span_us_per_call": 90.73663711547852,
+          "variant": "no_guard",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 86.8384912610054,
+          "wall_us_per_call": 87.14918047189713,
+          "cuda_span_us_per_call": 87.0195198059082,
+          "variant": "neither",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 56.302547454833984,
+          "wall_us_per_call": 56.588053703308105,
+          "cuda_span_us_per_call": 56.47359848022461,
+          "variant": "torch",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 99.34894740581512,
+          "wall_us_per_call": 99.64700788259506,
+          "cuda_span_us_per_call": 99.52256202697754,
+          "variant": "production",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 99.24739599227905,
+          "wall_us_per_call": 99.54851120710373,
+          "cuda_span_us_per_call": 99.42015647888184,
+          "variant": "controlled_full",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 95.44339030981064,
+          "wall_us_per_call": 95.74417024850845,
+          "cuda_span_us_per_call": 95.62111854553223,
+          "variant": "no_checks",
+          "repeat": 4
+        }
+      ],
+      "summary": {
+        "torch": {
+          "wall_us_per_call": {
+            "median": 56.648291647434235,
+            "min": 56.49358034133911,
+            "max": 56.822262704372406
+          },
+          "enqueue_us_per_call": {
+            "median": 56.34967237710953,
+            "min": 56.2063604593277,
+            "max": 56.49939179420471
+          },
+          "cuda_span_us_per_call": {
+            "median": 56.52480125427246,
+            "min": 56.38144016265869,
+            "max": 56.71743869781494
+          }
+        },
+        "production": {
+          "wall_us_per_call": {
+            "median": 99.68176484107971,
+            "min": 99.46472942829132,
+            "max": 99.95877742767334
+          },
+          "enqueue_us_per_call": {
+            "median": 99.38281029462814,
+            "min": 99.16912764310837,
+            "max": 99.64071214199066
+          },
+          "cuda_span_us_per_call": {
+            "median": 99.55327987670898,
+            "min": 99.33823585510254,
+            "max": 99.81951713562012
+          }
+        },
+        "controlled_full": {
+          "wall_us_per_call": {
+            "median": 100.24894028902054,
+            "min": 99.54851120710373,
+            "max": 100.91360658407211
+          },
+          "enqueue_us_per_call": {
+            "median": 99.93895888328552,
+            "min": 99.24739599227905,
+            "max": 100.6123423576355
+          },
+          "cuda_span_us_per_call": {
+            "median": 100.11648178100586,
+            "min": 99.42015647888184,
+            "max": 100.79232215881348
+          }
+        },
+        "no_checks": {
+          "wall_us_per_call": {
+            "median": 96.42433375120163,
+            "min": 95.74417024850845,
+            "max": 114.59510773420334
+          },
+          "enqueue_us_per_call": {
+            "median": 96.1264967918396,
+            "min": 95.44339030981064,
+            "max": 114.28266763687134
+          },
+          "cuda_span_us_per_call": {
+            "median": 96.29695892333984,
+            "min": 95.62111854553223,
+            "max": 114.47296142578125
+          }
+        },
+        "no_guard": {
+          "wall_us_per_call": {
+            "median": 91.2293791770935,
+            "min": 90.86333215236664,
+            "max": 91.48851037025452
+          },
+          "enqueue_us_per_call": {
+            "median": 90.9227505326271,
+            "min": 90.5538722872734,
+            "max": 91.17688983678818
+          },
+          "cuda_span_us_per_call": {
+            "median": 91.10527992248535,
+            "min": 90.73663711547852,
+            "max": 91.35104179382324
+          }
+        },
+        "neither": {
+          "wall_us_per_call": {
+            "median": 87.32404559850693,
+            "min": 87.11755275726318,
+            "max": 88.2139801979065
+          },
+          "enqueue_us_per_call": {
+            "median": 87.01961487531662,
+            "min": 86.8113711476326,
+            "max": 87.88872510194778
+          },
+          "cuda_span_us_per_call": {
+            "median": 87.193603515625,
+            "min": 86.99904441833496,
+            "max": 88.0844783782959
+          }
+        }
+      }
+    },
+    {
+      "shape": [
+        1,
+        1,
+        8,
+        128
+      ],
+      "exact_correctness": true,
+      "samples": [
+        {
+          "enqueue_us_per_call": 55.86087703704834,
+          "wall_us_per_call": 56.167617440223694,
+          "cuda_span_us_per_call": 56.06912136077881,
+          "variant": "torch",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 99.75120425224304,
+          "wall_us_per_call": 100.0765711069107,
+          "cuda_span_us_per_call": 99.94239807128906,
+          "variant": "production",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 99.2441177368164,
+          "wall_us_per_call": 99.55033659934998,
+          "cuda_span_us_per_call": 99.42015647888184,
+          "variant": "controlled_full",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 95.49319744110107,
+          "wall_us_per_call": 95.79073637723923,
+          "cuda_span_us_per_call": 95.66207885742188,
+          "variant": "no_checks",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 90.58330208063126,
+          "wall_us_per_call": 90.8920168876648,
+          "cuda_span_us_per_call": 90.76736450195312,
+          "variant": "no_guard",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 87.43617683649063,
+          "wall_us_per_call": 87.74761110544205,
+          "cuda_span_us_per_call": 87.61343955993652,
+          "variant": "neither",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 99.03103113174438,
+          "wall_us_per_call": 99.32812303304672,
+          "cuda_span_us_per_call": 99.19487953186035,
+          "variant": "production",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 98.85117411613464,
+          "wall_us_per_call": 99.14878755807877,
+          "cuda_span_us_per_call": 99.02079582214355,
+          "variant": "controlled_full",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 95.49885988235474,
+          "wall_us_per_call": 95.7956537604332,
+          "cuda_span_us_per_call": 95.67232131958008,
+          "variant": "no_checks",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 90.31105786561966,
+          "wall_us_per_call": 90.62156081199646,
+          "cuda_span_us_per_call": 90.49087524414062,
+          "variant": "no_guard",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 86.67685091495514,
+          "wall_us_per_call": 86.99499070644379,
+          "cuda_span_us_per_call": 86.85567855834961,
+          "variant": "neither",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 55.97501993179321,
+          "wall_us_per_call": 56.271590292453766,
+          "cuda_span_us_per_call": 56.156158447265625,
+          "variant": "torch",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 99.22213852405548,
+          "wall_us_per_call": 99.51964020729065,
+          "cuda_span_us_per_call": 99.38943862915039,
+          "variant": "controlled_full",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 95.21335363388062,
+          "wall_us_per_call": 95.50802409648895,
+          "cuda_span_us_per_call": 95.38559913635254,
+          "variant": "no_checks",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 90.66767990589142,
+          "wall_us_per_call": 90.97859263420105,
+          "cuda_span_us_per_call": 90.84927558898926,
+          "variant": "no_guard",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 86.58803999423981,
+          "wall_us_per_call": 86.89377456903458,
+          "cuda_span_us_per_call": 86.76351547241211,
+          "variant": "neither",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 55.80969154834747,
+          "wall_us_per_call": 56.086815893650055,
+          "cuda_span_us_per_call": 55.97184181213379,
+          "variant": "torch",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 99.16707873344421,
+          "wall_us_per_call": 99.46316480636597,
+          "cuda_span_us_per_call": 99.33823585510254,
+          "variant": "production",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 95.56815028190613,
+          "wall_us_per_call": 95.85924446582794,
+          "cuda_span_us_per_call": 95.74399948120117,
+          "variant": "no_checks",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 90.41294455528259,
+          "wall_us_per_call": 90.72303771972656,
+          "cuda_span_us_per_call": 90.59328079223633,
+          "variant": "no_guard",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 86.57548576593399,
+          "wall_us_per_call": 86.88397705554962,
+          "cuda_span_us_per_call": 86.75328254699707,
+          "variant": "neither",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 55.73544651269913,
+          "wall_us_per_call": 56.01078271865845,
+          "cuda_span_us_per_call": 55.90015888214111,
+          "variant": "torch",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 98.77320379018784,
+          "wall_us_per_call": 99.07137602567673,
+          "cuda_span_us_per_call": 98.93888473510742,
+          "variant": "production",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 99.15262460708618,
+          "wall_us_per_call": 99.44837540388107,
+          "cuda_span_us_per_call": 99.3177604675293,
+          "variant": "controlled_full",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 90.27466177940369,
+          "wall_us_per_call": 90.5798003077507,
+          "cuda_span_us_per_call": 90.43968200683594,
+          "variant": "no_guard",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 86.6350531578064,
+          "wall_us_per_call": 86.94164454936981,
+          "cuda_span_us_per_call": 86.81471824645996,
+          "variant": "neither",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 55.65296858549118,
+          "wall_us_per_call": 55.9462234377861,
+          "cuda_span_us_per_call": 55.82848072052002,
+          "variant": "torch",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 98.73967617750168,
+          "wall_us_per_call": 99.03501719236374,
+          "cuda_span_us_per_call": 98.90815734863281,
+          "variant": "production",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 99.08370673656464,
+          "wall_us_per_call": 99.38079863786697,
+          "cuda_span_us_per_call": 99.2460823059082,
+          "variant": "controlled_full",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 95.6612080335617,
+          "wall_us_per_call": 95.95457464456558,
+          "cuda_span_us_per_call": 95.83616256713867,
+          "variant": "no_checks",
+          "repeat": 4
+        }
+      ],
+      "summary": {
+        "torch": {
+          "wall_us_per_call": {
+            "median": 56.086815893650055,
+            "min": 55.9462234377861,
+            "max": 56.271590292453766
+          },
+          "enqueue_us_per_call": {
+            "median": 55.80969154834747,
+            "min": 55.65296858549118,
+            "max": 55.97501993179321
+          },
+          "cuda_span_us_per_call": {
+            "median": 55.97184181213379,
+            "min": 55.82848072052002,
+            "max": 56.156158447265625
+          }
+        },
+        "production": {
+          "wall_us_per_call": {
+            "median": 99.32812303304672,
+            "min": 99.03501719236374,
+            "max": 100.0765711069107
+          },
+          "enqueue_us_per_call": {
+            "median": 99.03103113174438,
+            "min": 98.73967617750168,
+            "max": 99.75120425224304
+          },
+          "cuda_span_us_per_call": {
+            "median": 99.19487953186035,
+            "min": 98.90815734863281,
+            "max": 99.94239807128906
+          }
+        },
+        "controlled_full": {
+          "wall_us_per_call": {
+            "median": 99.44837540388107,
+            "min": 99.14878755807877,
+            "max": 99.55033659934998
+          },
+          "enqueue_us_per_call": {
+            "median": 99.15262460708618,
+            "min": 98.85117411613464,
+            "max": 99.2441177368164
+          },
+          "cuda_span_us_per_call": {
+            "median": 99.3177604675293,
+            "min": 99.02079582214355,
+            "max": 99.42015647888184
+          }
+        },
+        "no_checks": {
+          "wall_us_per_call": {
+            "median": 95.7956537604332,
+            "min": 95.50802409648895,
+            "max": 95.95457464456558
+          },
+          "enqueue_us_per_call": {
+            "median": 95.49885988235474,
+            "min": 95.21335363388062,
+            "max": 95.6612080335617
+          },
+          "cuda_span_us_per_call": {
+            "median": 95.67232131958008,
+            "min": 95.38559913635254,
+            "max": 95.83616256713867
+          }
+        },
+        "no_guard": {
+          "wall_us_per_call": {
+            "median": 90.72303771972656,
+            "min": 90.5798003077507,
+            "max": 90.97859263420105
+          },
+          "enqueue_us_per_call": {
+            "median": 90.41294455528259,
+            "min": 90.27466177940369,
+            "max": 90.66767990589142
+          },
+          "cuda_span_us_per_call": {
+            "median": 90.59328079223633,
+            "min": 90.43968200683594,
+            "max": 90.84927558898926
+          }
+        },
+        "neither": {
+          "wall_us_per_call": {
+            "median": 86.94164454936981,
+            "min": 86.88397705554962,
+            "max": 87.74761110544205
+          },
+          "enqueue_us_per_call": {
+            "median": 86.6350531578064,
+            "min": 86.57548576593399,
+            "max": 87.43617683649063
+          },
+          "cuda_span_us_per_call": {
+            "median": 86.81471824645996,
+            "min": 86.75328254699707,
+            "max": 87.61343955993652
+          }
+        }
+      }
+    },
+    {
+      "shape": [
+        1,
+        512,
+        1024
+      ],
+      "exact_correctness": true,
+      "samples": [
+        {
+          "enqueue_us_per_call": 58.17204713821411,
+          "wall_us_per_call": 58.5738942027092,
+          "cuda_span_us_per_call": 58.45248222351074,
+          "variant": "torch",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 99.1135835647583,
+          "wall_us_per_call": 99.43582117557526,
+          "cuda_span_us_per_call": 99.3075180053711,
+          "variant": "production",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 99.44520890712738,
+          "wall_us_per_call": 99.75388646125793,
+          "cuda_span_us_per_call": 99.63520050048828,
+          "variant": "controlled_full",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 95.570869743824,
+          "wall_us_per_call": 95.86837142705917,
+          "cuda_span_us_per_call": 95.74399948120117,
+          "variant": "no_checks",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 90.33948183059692,
+          "wall_us_per_call": 90.65676480531693,
+          "cuda_span_us_per_call": 90.52160263061523,
+          "variant": "no_guard",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 86.85600012540817,
+          "wall_us_per_call": 87.17156946659088,
+          "cuda_span_us_per_call": 87.04000473022461,
+          "variant": "neither",
+          "repeat": 0
+        },
+        {
+          "enqueue_us_per_call": 98.6931100487709,
+          "wall_us_per_call": 98.99444878101349,
+          "cuda_span_us_per_call": 98.86719703674316,
+          "variant": "production",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 99.51449930667877,
+          "wall_us_per_call": 99.8106598854065,
+          "cuda_span_us_per_call": 99.68640327453613,
+          "variant": "controlled_full",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 95.79267352819443,
+          "wall_us_per_call": 96.09349071979523,
+          "cuda_span_us_per_call": 95.95904350280762,
+          "variant": "no_checks",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 90.85781872272491,
+          "wall_us_per_call": 91.16549044847488,
+          "cuda_span_us_per_call": 91.03360176086426,
+          "variant": "no_guard",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 86.94551885128021,
+          "wall_us_per_call": 87.25296705961227,
+          "cuda_span_us_per_call": 87.12191581726074,
+          "variant": "neither",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 56.34840577840805,
+          "wall_us_per_call": 56.63897842168808,
+          "cuda_span_us_per_call": 56.52480125427246,
+          "variant": "torch",
+          "repeat": 1
+        },
+        {
+          "enqueue_us_per_call": 100.13725608587265,
+          "wall_us_per_call": 100.43680667877197,
+          "cuda_span_us_per_call": 100.3212833404541,
+          "variant": "controlled_full",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 95.87809443473816,
+          "wall_us_per_call": 96.1780920624733,
+          "cuda_span_us_per_call": 96.05119705200195,
+          "variant": "no_checks",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 90.47791361808777,
+          "wall_us_per_call": 90.78841656446457,
+          "cuda_span_us_per_call": 90.65471649169922,
+          "variant": "no_guard",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 106.36676102876663,
+          "wall_us_per_call": 107.60486125946045,
+          "cuda_span_us_per_call": 107.4073600769043,
+          "variant": "neither",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 56.38938397169113,
+          "wall_us_per_call": 56.717805564403534,
+          "cuda_span_us_per_call": 56.596479415893555,
+          "variant": "torch",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 99.50261563062668,
+          "wall_us_per_call": 99.8147577047348,
+          "cuda_span_us_per_call": 99.68640327453613,
+          "variant": "production",
+          "repeat": 2
+        },
+        {
+          "enqueue_us_per_call": 96.41848504543304,
+          "wall_us_per_call": 96.71606123447418,
+          "cuda_span_us_per_call": 96.59392356872559,
+          "variant": "no_checks",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 90.66469967365265,
+          "wall_us_per_call": 91.04274213314056,
+          "cuda_span_us_per_call": 90.91072082519531,
+          "variant": "no_guard",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 86.6255909204483,
+          "wall_us_per_call": 86.93762123584747,
+          "cuda_span_us_per_call": 86.81471824645996,
+          "variant": "neither",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 56.10663443803787,
+          "wall_us_per_call": 56.39467388391495,
+          "cuda_span_us_per_call": 56.27903938293457,
+          "variant": "torch",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 99.07521307468414,
+          "wall_us_per_call": 99.37651455402374,
+          "cuda_span_us_per_call": 99.2460823059082,
+          "variant": "production",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 99.47128593921661,
+          "wall_us_per_call": 99.76975619792938,
+          "cuda_span_us_per_call": 99.64544296264648,
+          "variant": "controlled_full",
+          "repeat": 3
+        },
+        {
+          "enqueue_us_per_call": 90.58788418769836,
+          "wall_us_per_call": 90.89529514312744,
+          "cuda_span_us_per_call": 90.76736450195312,
+          "variant": "no_guard",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 86.98582649230957,
+          "wall_us_per_call": 87.2974842786789,
+          "cuda_span_us_per_call": 87.1731185913086,
+          "variant": "neither",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 56.13241344690323,
+          "wall_us_per_call": 56.42060190439224,
+          "cuda_span_us_per_call": 56.299519538879395,
+          "variant": "torch",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 99.65069591999054,
+          "wall_us_per_call": 100.02505034208298,
+          "cuda_span_us_per_call": 99.82975959777832,
+          "variant": "production",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 99.6159017086029,
+          "wall_us_per_call": 99.91321712732315,
+          "cuda_span_us_per_call": 99.78879928588867,
+          "variant": "controlled_full",
+          "repeat": 4
+        },
+        {
+          "enqueue_us_per_call": 96.34159505367279,
+          "wall_us_per_call": 96.6404378414154,
+          "cuda_span_us_per_call": 96.52223587036133,
+          "variant": "no_checks",
+          "repeat": 4
+        }
+      ],
+      "summary": {
+        "torch": {
+          "wall_us_per_call": {
+            "median": 56.63897842168808,
+            "min": 56.39467388391495,
+            "max": 58.5738942027092
+          },
+          "enqueue_us_per_call": {
+            "median": 56.34840577840805,
+            "min": 56.10663443803787,
+            "max": 58.17204713821411
+          },
+          "cuda_span_us_per_call": {
+            "median": 56.52480125427246,
+            "min": 56.27903938293457,
+            "max": 58.45248222351074
+          }
+        },
+        "production": {
+          "wall_us_per_call": {
+            "median": 99.43582117557526,
+            "min": 98.99444878101349,
+            "max": 100.02505034208298
+          },
+          "enqueue_us_per_call": {
+            "median": 99.1135835647583,
+            "min": 98.6931100487709,
+            "max": 99.65069591999054
+          },
+          "cuda_span_us_per_call": {
+            "median": 99.3075180053711,
+            "min": 98.86719703674316,
+            "max": 99.82975959777832
+          }
+        },
+        "controlled_full": {
+          "wall_us_per_call": {
+            "median": 99.8106598854065,
+            "min": 99.75388646125793,
+            "max": 100.43680667877197
+          },
+          "enqueue_us_per_call": {
+            "median": 99.51449930667877,
+            "min": 99.44520890712738,
+            "max": 100.13725608587265
+          },
+          "cuda_span_us_per_call": {
+            "median": 99.68640327453613,
+            "min": 99.63520050048828,
+            "max": 100.3212833404541
+          }
+        },
+        "no_checks": {
+          "wall_us_per_call": {
+            "median": 96.1780920624733,
+            "min": 95.86837142705917,
+            "max": 96.71606123447418
+          },
+          "enqueue_us_per_call": {
+            "median": 95.87809443473816,
+            "min": 95.570869743824,
+            "max": 96.41848504543304
+          },
+          "cuda_span_us_per_call": {
+            "median": 96.05119705200195,
+            "min": 95.74399948120117,
+            "max": 96.59392356872559
+          }
+        },
+        "no_guard": {
+          "wall_us_per_call": {
+            "median": 90.89529514312744,
+            "min": 90.65676480531693,
+            "max": 91.16549044847488
+          },
+          "enqueue_us_per_call": {
+            "median": 90.58788418769836,
+            "min": 90.33948183059692,
+            "max": 90.85781872272491
+          },
+          "cuda_span_us_per_call": {
+            "median": 90.76736450195312,
+            "min": 90.52160263061523,
+            "max": 91.03360176086426
+          }
+        },
+        "neither": {
+          "wall_us_per_call": {
+            "median": 87.25296705961227,
+            "min": 86.93762123584747,
+            "max": 107.60486125946045
+          },
+          "enqueue_us_per_call": {
+            "median": 86.94551885128021,
+            "min": 86.6255909204483,
+            "max": 106.36676102876663
+          },
+          "cuda_span_us_per_call": {
+            "median": 87.12191581726074,
+            "min": 86.81471824645996,
+            "max": 107.4073600769043
+          }
+        }
+      }
+    }
+  ]
+}

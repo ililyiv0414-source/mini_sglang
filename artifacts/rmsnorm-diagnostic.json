@@ -1,0 +1,96 @@
+{
+  "torch": "2.6.0+cu124",
+  "triton": "3.2.0",
+  "checked": 34,
+  "prompt_index": 0,
+  "name": "model.layers.8.self_attn.q_norm",
+  "shape": [
+    1,
+    22,
+    16,
+    128
+  ],
+  "output": {
+    "exact": false,
+    "different_elements": 3,
+    "max_abs": 0.0078125,
+    "mean_abs": 2.6009300313489803e-07
+  },
+  "variance": {
+    "exact": false,
+    "different_elements": 133,
+    "max_abs": 2.384185791015625e-07,
+    "mean_abs": 3.1502253250437207e-08
+  },
+  "inverse_rms": {
+    "exact": false,
+    "different_elements": 69,
+    "max_abs": 4.76837158203125e-07,
+    "mean_abs": 1.9473109347245554e-08
+  },
+  "normalized_fp32": {
+    "exact": false,
+    "different_elements": 7919,
+    "max_abs": 9.5367431640625e-07,
+    "mean_abs": 1.0520035509387071e-08
+  },
+  "samples": [
+    {
+      "row": 219,
+      "column": 8,
+      "x": 0.2314453125,
+      "weight": 1.2734375,
+      "torch_var": 0.5589556097984314,
+      "triton_var": 0.5589555501937866,
+      "fp64_var": 0.5589555915503297,
+      "torch_inv": 1.337552785873413,
+      "triton_inv": 1.3375529050827026,
+      "torch_normalized_fp32": 0.3095703125,
+      "triton_normalized_fp32": 0.3095703423023224,
+      "torch_normalized_bf16": 0.30859375,
+      "triton_normalized_bf16": 0.310546875,
+      "expected": 0.392578125,
+      "actual": 0.39453125
+    },
+    {
+      "row": 248,
+      "column": 5,
+      "x": -0.302734375,
+      "weight": 1.1328125,
+      "torch_var": 1.2524586915969849,
+      "triton_var": 1.2524588108062744,
+      "fp64_var": 1.25245869794162,
+      "torch_inv": 0.8935484886169434,
+      "triton_inv": 0.8935484290122986,
+      "torch_normalized_fp32": -0.2705078423023224,
+      "triton_normalized_fp32": -0.2705078125,
+      "torch_normalized_bf16": -0.271484375,
+      "triton_normalized_bf16": -0.26953125,
+      "expected": -0.306640625,
+      "actual": -0.3046875
+    },
+    {
+      "row": 248,
+      "column": 31,
+      "x": 1.2109375,
+      "weight": 1.5546875,
+      "torch_var": 1.2524586915969849,
+      "triton_var": 1.2524588108062744,
+      "fp64_var": 1.25245869794162,
+      "torch_inv": 0.8935484886169434,
+      "triton_inv": 0.8935484290122986,
+      "torch_normalized_fp32": 1.0820313692092896,
+      "triton_normalized_fp32": 1.08203125,
+      "torch_normalized_bf16": 1.0859375,
+      "triton_normalized_bf16": 1.078125,
+      "expected": 1.6875,
+      "actual": 1.6796875
+    }
+  ],
+  "debug_reconstruction_vs_kernel": {
+    "exact": true,
+    "different_elements": 0,
+    "max_abs": 0.0,
+    "mean_abs": 0.0
+  }
+}

@@ -1,0 +1,212 @@
+[
+  {
+    "step": 0,
+    "order": [
+      0,
+      1
+    ],
+    "lengths": [
+      16,
+      24
+    ],
+    "predicted": [
+      198,
+      785
+    ],
+    "expected": [
+      198,
+      785
+    ],
+    "max_abs_error": 0.5625,
+    "passed": true
+  },
+  {
+    "step": 1,
+    "order": [
+      1,
+      0
+    ],
+    "lengths": [
+      17,
+      25
+    ],
+    "predicted": [
+      84648,
+      151644
+    ],
+    "expected": [
+      84648,
+      151644
+    ],
+    "max_abs_error": 0.5,
+    "passed": true
+  },
+  {
+    "step": 2,
+    "order": [
+      0,
+      1
+    ],
+    "lengths": [
+      18,
+      26
+    ],
+    "predicted": [
+      198,
+      6500
+    ],
+    "expected": [
+      198,
+      6500
+    ],
+    "max_abs_error": 0.75,
+    "passed": true
+  },
+  {
+    "step": 3,
+    "order": [
+      1,
+      0
+    ],
+    "lengths": [
+      19,
+      27
+    ],
+    "predicted": [
+      374,
+      32313
+    ],
+    "expected": [
+      374,
+      32313
+    ],
+    "max_abs_error": 2.125,
+    "passed": true
+  },
+  {
+    "step": 4,
+    "order": [
+      0,
+      1
+    ],
+    "lengths": [
+      20,
+      28
+    ],
+    "predicted": [
+      11,
+      264
+    ],
+    "expected": [
+      11,
+      264
+    ],
+    "max_abs_error": 0.40625,
+    "passed": true
+  },
+  {
+    "step": 5,
+    "order": [
+      1,
+      0
+    ],
+    "lengths": [
+      21,
+      29
+    ],
+    "predicted": [
+      943,
+      279
+    ],
+    "expected": [
+      943,
+      279
+    ],
+    "max_abs_error": 0.412109375,
+    "passed": true
+  },
+  {
+    "step": 6,
+    "order": [
+      0,
+      1
+    ],
+    "lengths": [
+      22,
+      30
+    ],
+    "predicted": [
+      1196,
+      315
+    ],
+    "expected": [
+      1196,
+      315
+    ],
+    "max_abs_error": 0.396728515625,
+    "passed": true
+  },
+  {
+    "step": 7,
+    "order": [
+      1,
+      0
+    ],
+    "lengths": [
+      23,
+      31
+    ],
+    "predicted": [
+      4938,
+      374
+    ],
+    "expected": [
+      4938,
+      374
+    ],
+    "max_abs_error": 0.4375,
+    "passed": true
+  },
+  {
+    "step": 8,
+    "order": [
+      0,
+      1
+    ],
+    "lengths": [
+      24,
+      32
+    ],
+    "predicted": [
+      10161,
+      6500
+    ],
+    "expected": [
+      10161,
+      6500
+    ],
+    "max_abs_error": 0.5,
+    "passed": true
+  },
+  {
+    "step": 9,
+    "order": [
+      1,
+      0
+    ],
+    "lengths": [
+      25,
+      33
+    ],
+    "predicted": [
+      1483,
+      369
+    ],
+    "expected": [
+      1483,
+      369
+    ],
+    "max_abs_error": 0.4765625,
+    "passed": true
+  }
+]

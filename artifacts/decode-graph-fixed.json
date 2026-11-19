@@ -1,0 +1,258 @@
+{
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "gpu": "NVIDIA A800-SXM4-80GB",
+  "calls_per_sample": 30,
+  "norm_backend": "torch",
+  "cases": [
+    {
+      "prefix_length": 512,
+      "checks": [
+        {
+          "input_token": 11359,
+          "exact_logits_and_argmax": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "input_token": 11376,
+          "exact_logits_and_argmax": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "input_token": 11462,
+          "exact_logits_and_argmax": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "input_token": 11359,
+          "exact_logits_and_argmax": true,
+          "max_abs_error": 0.0
+        }
+      ],
+      "prefix_unchanged": true,
+      "cache_capacity_bytes": 58834944,
+      "capture_ms": 97.2200259566307,
+      "memory_before_capture": {
+        "allocated": 1326713856,
+        "reserved": 1556086784
+      },
+      "memory_after_capture": {
+        "allocated": 1335539200,
+        "reserved": 1482686464,
+        "capture_peak_allocated": 1339799552
+      },
+      "samples": [
+        {
+          "wall_ms_per_call": 19.084542120496433,
+          "enqueue_ms_per_call": 19.077961271007855,
+          "cuda_span_ms_per_call": 19.082649739583335,
+          "mode": "eager",
+          "repeat": 0
+        },
+        {
+          "wall_ms_per_call": 5.44446458419164,
+          "enqueue_ms_per_call": 0.022155046463012695,
+          "cuda_span_ms_per_call": 5.443345133463541,
+          "mode": "graph",
+          "repeat": 0
+        },
+        {
+          "wall_ms_per_call": 5.435232569773992,
+          "enqueue_ms_per_call": 0.01670829951763153,
+          "cuda_span_ms_per_call": 5.4349822998046875,
+          "mode": "graph",
+          "repeat": 1
+        },
+        {
+          "wall_ms_per_call": 19.123873735467594,
+          "enqueue_ms_per_call": 19.118698810537655,
+          "cuda_span_ms_per_call": 19.12362263997396,
+          "mode": "eager",
+          "repeat": 1
+        },
+        {
+          "wall_ms_per_call": 19.134845832983654,
+          "enqueue_ms_per_call": 19.129390145341556,
+          "cuda_span_ms_per_call": 19.133721923828126,
+          "mode": "eager",
+          "repeat": 2
+        },
+        {
+          "wall_ms_per_call": 5.413960789640744,
+          "enqueue_ms_per_call": 0.01613721251487732,
+          "cuda_span_ms_per_call": 5.413440958658854,
+          "mode": "graph",
+          "repeat": 2
+        },
+        {
+          "wall_ms_per_call": 5.413026238481204,
+          "enqueue_ms_per_call": 0.01497715711593628,
+          "cuda_span_ms_per_call": 5.412751770019531,
+          "mode": "graph",
+          "repeat": 3
+        },
+        {
+          "wall_ms_per_call": 19.077488780021667,
+          "enqueue_ms_per_call": 19.06733314196269,
+          "cuda_span_ms_per_call": 19.0762451171875,
+          "mode": "eager",
+          "repeat": 3
+        },
+        {
+          "wall_ms_per_call": 19.234241172671318,
+          "enqueue_ms_per_call": 19.229114800691605,
+          "cuda_span_ms_per_call": 19.233980305989583,
+          "mode": "eager",
+          "repeat": 4
+        },
+        {
+          "wall_ms_per_call": 5.4326072335243225,
+          "enqueue_ms_per_call": 0.01619569957256317,
+          "cuda_span_ms_per_call": 5.432286071777344,
+          "mode": "graph",
+          "repeat": 4
+        }
+      ],
+      "summary": {
+        "eager": {
+          "median_ms": 19.123873735467594,
+          "min_ms": 19.077488780021667,
+          "max_ms": 19.234241172671318
+        },
+        "graph": {
+          "median_ms": 5.4326072335243225,
+          "min_ms": 5.413026238481204,
+          "max_ms": 5.44446458419164
+        },
+        "speedup": 3.520201795089329
+      }
+    },
+    {
+      "prefix_length": 1024,
+      "checks": [
+        {
+          "input_token": 125655,
+          "exact_logits_and_argmax": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "input_token": 125672,
+          "exact_logits_and_argmax": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "input_token": 125758,
+          "exact_logits_and_argmax": true,
+          "max_abs_error": 0.0
+        },
+        {
+          "input_token": 125655,
+          "exact_logits_and_argmax": true,
+          "max_abs_error": 0.0
+        }
+      ],
+      "prefix_unchanged": true,
+      "cache_capacity_bytes": 117555200,
+      "capture_ms": 69.52027603983879,
+      "memory_before_capture": {
+        "allocated": 1461197824,
+        "reserved": 2095054848
+      },
+      "memory_after_capture": {
+        "allocated": 1461503488,
+        "reserved": 1560281088,
+        "capture_peak_allocated": 1469991936
+      },
+      "samples": [
+        {
+          "wall_ms_per_call": 18.922188878059387,
+          "enqueue_ms_per_call": 18.91692529122035,
+          "cuda_span_ms_per_call": 18.922052001953126,
+          "mode": "eager",
+          "repeat": 0
+        },
+        {
+          "wall_ms_per_call": 5.816163991888364,
+          "enqueue_ms_per_call": 0.015026703476905823,
+          "cuda_span_ms_per_call": 5.815671284993489,
+          "mode": "graph",
+          "repeat": 0
+        },
+        {
+          "wall_ms_per_call": 5.818226809302966,
+          "enqueue_ms_per_call": 0.017435476183891296,
+          "cuda_span_ms_per_call": 5.817958577473958,
+          "mode": "graph",
+          "repeat": 1
+        },
+        {
+          "wall_ms_per_call": 18.955678616960842,
+          "enqueue_ms_per_call": 18.95063892006874,
+          "cuda_span_ms_per_call": 18.95546875,
+          "mode": "eager",
+          "repeat": 1
+        },
+        {
+          "wall_ms_per_call": 18.92117162545522,
+          "enqueue_ms_per_call": 18.91595833003521,
+          "cuda_span_ms_per_call": 18.92095947265625,
+          "mode": "eager",
+          "repeat": 2
+        },
+        {
+          "wall_ms_per_call": 5.821610863010089,
+          "enqueue_ms_per_call": 0.01940801739692688,
+          "cuda_span_ms_per_call": 5.819699096679687,
+          "mode": "graph",
+          "repeat": 2
+        },
+        {
+          "wall_ms_per_call": 5.816783756017685,
+          "enqueue_ms_per_call": 0.016633545358975727,
+          "cuda_span_ms_per_call": 5.816490681966146,
+          "mode": "graph",
+          "repeat": 3
+        },
+        {
+          "wall_ms_per_call": 18.987540776530903,
+          "enqueue_ms_per_call": 18.982304881016415,
+          "cuda_span_ms_per_call": 18.987349446614584,
+          "mode": "eager",
+          "repeat": 3
+        },
+        {
+          "wall_ms_per_call": 18.905542915066082,
+          "enqueue_ms_per_call": 18.900265047947567,
+          "cuda_span_ms_per_call": 18.905326334635415,
+          "mode": "eager",
+          "repeat": 4
+        },
+        {
+          "wall_ms_per_call": 5.8156850437323255,
+          "enqueue_ms_per_call": 0.015594437718391418,
+          "cuda_span_ms_per_call": 5.815398152669271,
+          "mode": "graph",
+          "repeat": 4
+        }
+      ],
+      "summary": {
+        "eager": {
+          "median_ms": 18.922188878059387,
+          "min_ms": 18.905542915066082,
+          "max_ms": 18.987540776530903
+        },
+        "graph": {
+          "median_ms": 5.816783756017685,
+          "min_ms": 5.8156850437323255,
+          "max_ms": 5.821610863010089
+        },
+        "speedup": 3.253032890982695
+      }
+    }
+  ],
+  "source_sha256": {
+    "/huhaifeng2/ljl/sgl/scripts/benchmark_decode_graph.py": "6ed9656f002a39f33f925bd8f8323b417b9e5492523506b8aae3df2d231c0902",
+    "/huhaifeng2/ljl/sgl/mini_engine/qwen3.py": "89d62cf9247808385a7f2299bf935bdce1872b65b6242401409f8ae4360f9ae0"
+  },
+  "scope": "Fixed prefix and fixed cache write position, batch=1, BF16. No advancing positions or autoregressive token feedback. Token upload, prefill, allocation, warmup and capture excluded from timing. Input updates validated separately. Eager measured while graph pool remains resident. CUDA event spans may include idle gaps. Shared GPU; not serving throughput."
+}

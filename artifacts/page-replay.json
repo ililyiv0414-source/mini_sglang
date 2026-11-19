@@ -1,0 +1,30 @@
+[
+  {
+    "page_tokens": 4,
+    "peak_pages": 26,
+    "peak_assigned_bytes": 11927552,
+    "max_unused_assigned_tokens": 6,
+    "reused_page_allocations": 66
+  },
+  {
+    "page_tokens": 8,
+    "peak_pages": 14,
+    "peak_assigned_bytes": 12845056,
+    "max_unused_assigned_tokens": 14,
+    "reused_page_allocations": 34
+  },
+  {
+    "page_tokens": 16,
+    "peak_pages": 7,
+    "peak_assigned_bytes": 12845056,
+    "max_unused_assigned_tokens": 28,
+    "reused_page_allocations": 17
+  },
+  {
+    "page_tokens": 32,
+    "peak_pages": 4,
+    "peak_assigned_bytes": 14680064,
+    "max_unused_assigned_tokens": 48,
+    "reused_page_allocations": 8
+  }
+]

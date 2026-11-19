@@ -1,0 +1,3180 @@
+{
+  "dtype": "bf16",
+  "input_length": 512,
+  "history_policy": "All paths receive identical history selected by custom full recomputation",
+  "torch": "2.6.0+cu124",
+  "rows": [
+    {
+      "step": 0,
+      "history_length": 512,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            198,
+            220,
+            271,
+            3315,
+            151645
+          ],
+          "logits": [
+            9.0,
+            7.84375,
+            7.8125,
+            7.6875,
+            7.625
+          ],
+          "top2_margin": 1.15625
+        },
+        "custom_cache": {
+          "ids": [
+            198,
+            220,
+            271,
+            3315,
+            151645
+          ],
+          "logits": [
+            9.0,
+            7.84375,
+            7.8125,
+            7.6875,
+            7.625
+          ],
+          "top2_margin": 1.15625
+        },
+        "hf_full": {
+          "ids": [
+            198,
+            220,
+            271,
+            3315,
+            151645
+          ],
+          "logits": [
+            9.0,
+            7.84375,
+            7.8125,
+            7.6875,
+            7.625
+          ],
+          "top2_margin": 1.15625
+        },
+        "hf_cache": {
+          "ids": [
+            198,
+            220,
+            271,
+            3315,
+            151645
+          ],
+          "logits": [
+            9.0,
+            7.84375,
+            7.8125,
+            7.6875,
+            7.625
+          ],
+          "top2_margin": 1.15625
+        }
+      }
+    },
+    {
+      "step": 1,
+      "history_length": 513,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.21875,
+        "mean_abs": 0.03965785726904869,
+        "same_argmax": false
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.21875,
+        "mean_abs": 0.03965785726904869,
+        "same_argmax": false
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            198,
+            73594,
+            63,
+            151645
+          ],
+          "logits": [
+            11.0625,
+            11.0,
+            10.0,
+            9.3125,
+            8.5625
+          ],
+          "top2_margin": 0.0625
+        },
+        "custom_cache": {
+          "ids": [
+            198,
+            13874,
+            73594,
+            63,
+            151645
+          ],
+          "logits": [
+            10.9375,
+            10.9375,
+            9.875,
+            9.125,
+            8.5
+          ],
+          "top2_margin": 0.0
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            198,
+            73594,
+            63,
+            151645
+          ],
+          "logits": [
+            11.0625,
+            11.0,
+            10.0,
+            9.3125,
+            8.5625
+          ],
+          "top2_margin": 0.0625
+        },
+        "hf_cache": {
+          "ids": [
+            198,
+            13874,
+            73594,
+            63,
+            151645
+          ],
+          "logits": [
+            10.9375,
+            10.9375,
+            9.875,
+            9.125,
+            8.5
+          ],
+          "top2_margin": 0.0
+        }
+      }
+    },
+    {
+      "step": 2,
+      "history_length": 514,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.3125,
+        "mean_abs": 0.05104704573750496,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.3125,
+        "mean_abs": 0.05104704573750496,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            19324,
+            3989,
+            13874,
+            28587,
+            18639
+          ],
+          "logits": [
+            19.25,
+            19.125,
+            14.1875,
+            12.5,
+            12.25
+          ],
+          "top2_margin": 0.125
+        },
+        "custom_cache": {
+          "ids": [
+            19324,
+            3989,
+            13874,
+            28587,
+            18639
+          ],
+          "logits": [
+            19.25,
+            19.0,
+            14.125,
+            12.5625,
+            12.25
+          ],
+          "top2_margin": 0.25
+        },
+        "hf_full": {
+          "ids": [
+            19324,
+            3989,
+            13874,
+            28587,
+            18639
+          ],
+          "logits": [
+            19.25,
+            19.125,
+            14.1875,
+            12.5,
+            12.25
+          ],
+          "top2_margin": 0.125
+        },
+        "hf_cache": {
+          "ids": [
+            19324,
+            3989,
+            13874,
+            28587,
+            18639
+          ],
+          "logits": [
+            19.25,
+            19.0,
+            14.125,
+            12.5625,
+            12.25
+          ],
+          "top2_margin": 0.25
+        }
+      }
+    },
+    {
+      "step": 3,
+      "history_length": 515,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.30078125,
+        "mean_abs": 0.059997398406267166,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.30078125,
+        "mean_abs": 0.059997398406267166,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            2132,
+            40,
+            73594,
+            1986
+          ],
+          "logits": [
+            13.875,
+            13.375,
+            12.9375,
+            12.8125,
+            12.8125
+          ],
+          "top2_margin": 0.5
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            2132,
+            40,
+            73594,
+            1986
+          ],
+          "logits": [
+            13.8125,
+            13.25,
+            12.875,
+            12.8125,
+            12.75
+          ],
+          "top2_margin": 0.5625
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            2132,
+            40,
+            73594,
+            1986
+          ],
+          "logits": [
+            13.875,
+            13.375,
+            12.9375,
+            12.8125,
+            12.8125
+          ],
+          "top2_margin": 0.5
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            2132,
+            40,
+            73594,
+            1986
+          ],
+          "logits": [
+            13.8125,
+            13.25,
+            12.875,
+            12.8125,
+            12.75
+          ],
+          "top2_margin": 0.5625
+        }
+      }
+    },
+    {
+      "step": 4,
+      "history_length": 516,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.265625,
+        "mean_abs": 0.04546109214425087,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.265625,
+        "mean_abs": 0.04546109214425087,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            28587,
+            18639
+          ],
+          "logits": [
+            22.0,
+            20.625,
+            15.875,
+            13.8125,
+            13.8125
+          ],
+          "top2_margin": 1.375
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            28587,
+            18639
+          ],
+          "logits": [
+            22.125,
+            20.875,
+            15.875,
+            13.9375,
+            13.9375
+          ],
+          "top2_margin": 1.25
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            28587,
+            18639
+          ],
+          "logits": [
+            22.0,
+            20.625,
+            15.875,
+            13.8125,
+            13.8125
+          ],
+          "top2_margin": 1.375
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            28587,
+            18639
+          ],
+          "logits": [
+            22.125,
+            20.875,
+            15.875,
+            13.9375,
+            13.9375
+          ],
+          "top2_margin": 1.25
+        }
+      }
+    },
+    {
+      "step": 5,
+      "history_length": 517,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.21875,
+        "mean_abs": 0.03432321548461914,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.21875,
+        "mean_abs": 0.03432321548461914,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            58,
+            322,
+            27
+          ],
+          "logits": [
+            13.125,
+            11.125,
+            10.6875,
+            10.5625,
+            10.5
+          ],
+          "top2_margin": 2.0
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            58,
+            322,
+            27
+          ],
+          "logits": [
+            13.125,
+            11.125,
+            10.75,
+            10.6875,
+            10.5625
+          ],
+          "top2_margin": 2.0
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            58,
+            322,
+            27
+          ],
+          "logits": [
+            13.125,
+            11.125,
+            10.6875,
+            10.5625,
+            10.5
+          ],
+          "top2_margin": 2.0
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            58,
+            322,
+            27
+          ],
+          "logits": [
+            13.125,
+            11.125,
+            10.75,
+            10.6875,
+            10.5625
+          ],
+          "top2_margin": 2.0
+        }
+      }
+    },
+    {
+      "step": 6,
+      "history_length": 518,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.3984375,
+        "mean_abs": 0.06704918295145035,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.3984375,
+        "mean_abs": 0.06704918295145035,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            28587
+          ],
+          "logits": [
+            21.25,
+            20.125,
+            14.625,
+            13.9375,
+            13.0
+          ],
+          "top2_margin": 1.125
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            28587
+          ],
+          "logits": [
+            21.25,
+            20.25,
+            14.5,
+            13.9375,
+            12.9375
+          ],
+          "top2_margin": 1.0
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            28587
+          ],
+          "logits": [
+            21.25,
+            20.125,
+            14.625,
+            13.9375,
+            13.0
+          ],
+          "top2_margin": 1.125
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            28587
+          ],
+          "logits": [
+            21.25,
+            20.25,
+            14.5,
+            13.9375,
+            12.9375
+          ],
+          "top2_margin": 1.0
+        }
+      }
+    },
+    {
+      "step": 7,
+      "history_length": 519,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.255859375,
+        "mean_abs": 0.03644935041666031,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.255859375,
+        "mean_abs": 0.03644935041666031,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            27
+          ],
+          "logits": [
+            16.625,
+            13.75,
+            11.6875,
+            10.9375,
+            10.75
+          ],
+          "top2_margin": 2.875
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            27
+          ],
+          "logits": [
+            16.625,
+            13.8125,
+            11.75,
+            11.0625,
+            10.75
+          ],
+          "top2_margin": 2.8125
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            27
+          ],
+          "logits": [
+            16.625,
+            13.75,
+            11.6875,
+            10.9375,
+            10.75
+          ],
+          "top2_margin": 2.875
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            27
+          ],
+          "logits": [
+            16.625,
+            13.8125,
+            11.75,
+            11.0625,
+            10.75
+          ],
+          "top2_margin": 2.8125
+        }
+      }
+    },
+    {
+      "step": 8,
+      "history_length": 520,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.296875,
+        "mean_abs": 0.045725930482149124,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.296875,
+        "mean_abs": 0.045725930482149124,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            28587
+          ],
+          "logits": [
+            22.375,
+            19.625,
+            15.5,
+            15.3125,
+            14.4375
+          ],
+          "top2_margin": 2.75
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            28587
+          ],
+          "logits": [
+            22.375,
+            19.625,
+            15.375,
+            15.3125,
+            14.5
+          ],
+          "top2_margin": 2.75
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            28587
+          ],
+          "logits": [
+            22.375,
+            19.625,
+            15.5,
+            15.3125,
+            14.4375
+          ],
+          "top2_margin": 2.75
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            28587
+          ],
+          "logits": [
+            22.375,
+            19.625,
+            15.375,
+            15.3125,
+            14.5
+          ],
+          "top2_margin": 2.75
+        }
+      }
+    },
+    {
+      "step": 9,
+      "history_length": 521,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.40625,
+        "mean_abs": 0.05137866362929344,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.40625,
+        "mean_abs": 0.05137866362929344,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            3989,
+            522
+          ],
+          "logits": [
+            18.25,
+            14.5625,
+            11.5625,
+            10.5,
+            10.5
+          ],
+          "top2_margin": 3.6875
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            27
+          ],
+          "logits": [
+            18.125,
+            14.5,
+            11.5625,
+            10.5625,
+            10.5625
+          ],
+          "top2_margin": 3.625
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            3989,
+            522
+          ],
+          "logits": [
+            18.25,
+            14.5625,
+            11.5625,
+            10.5,
+            10.5
+          ],
+          "top2_margin": 3.6875
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            27
+          ],
+          "logits": [
+            18.125,
+            14.5,
+            11.5625,
+            10.5625,
+            10.5625
+          ],
+          "top2_margin": 3.625
+        }
+      }
+    },
+    {
+      "step": 10,
+      "history_length": 522,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.34375,
+        "mean_abs": 0.04831300303339958,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.34375,
+        "mean_abs": 0.04831300303339958,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            7808
+          ],
+          "logits": [
+            22.5,
+            20.375,
+            15.125,
+            14.9375,
+            13.8125
+          ],
+          "top2_margin": 2.125
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            7808
+          ],
+          "logits": [
+            22.5,
+            20.375,
+            15.0,
+            15.0,
+            13.9375
+          ],
+          "top2_margin": 2.125
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            7808
+          ],
+          "logits": [
+            22.5,
+            20.375,
+            15.125,
+            14.9375,
+            13.8125
+          ],
+          "top2_margin": 2.125
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            7808
+          ],
+          "logits": [
+            22.5,
+            20.375,
+            15.0,
+            15.0,
+            13.9375
+          ],
+          "top2_margin": 2.125
+        }
+      }
+    },
+    {
+      "step": 11,
+      "history_length": 523,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.296875,
+        "mean_abs": 0.04569611698389053,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.296875,
+        "mean_abs": 0.04569611698389053,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            90716
+          ],
+          "logits": [
+            18.875,
+            15.0,
+            11.25,
+            11.0625,
+            10.4375
+          ],
+          "top2_margin": 3.875
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            90716
+          ],
+          "logits": [
+            18.875,
+            14.9375,
+            11.1875,
+            11.125,
+            10.3125
+          ],
+          "top2_margin": 3.9375
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            90716
+          ],
+          "logits": [
+            18.875,
+            15.0,
+            11.25,
+            11.0625,
+            10.4375
+          ],
+          "top2_margin": 3.875
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            90716
+          ],
+          "logits": [
+            18.875,
+            14.9375,
+            11.1875,
+            11.125,
+            10.3125
+          ],
+          "top2_margin": 3.9375
+        }
+      }
+    },
+    {
+      "step": 12,
+      "history_length": 524,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.244140625,
+        "mean_abs": 0.044329505413770676,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.244140625,
+        "mean_abs": 0.044329505413770676,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            7808
+          ],
+          "logits": [
+            22.25,
+            20.0,
+            14.4375,
+            14.1875,
+            13.875
+          ],
+          "top2_margin": 2.25
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            7808
+          ],
+          "logits": [
+            22.375,
+            20.0,
+            14.4375,
+            14.25,
+            14.0
+          ],
+          "top2_margin": 2.375
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            7808
+          ],
+          "logits": [
+            22.25,
+            20.0,
+            14.4375,
+            14.1875,
+            13.875
+          ],
+          "top2_margin": 2.25
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            7808
+          ],
+          "logits": [
+            22.375,
+            20.0,
+            14.4375,
+            14.25,
+            14.0
+          ],
+          "top2_margin": 2.375
+        }
+      }
+    },
+    {
+      "step": 13,
+      "history_length": 525,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.375,
+        "mean_abs": 0.057878296822309494,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.375,
+        "mean_abs": 0.057878296822309494,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            90716
+          ],
+          "logits": [
+            20.125,
+            15.75,
+            11.375,
+            10.75,
+            10.625
+          ],
+          "top2_margin": 4.375
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            9902
+          ],
+          "logits": [
+            19.75,
+            15.5625,
+            11.125,
+            10.5625,
+            10.3125
+          ],
+          "top2_margin": 4.1875
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            90716
+          ],
+          "logits": [
+            20.125,
+            15.75,
+            11.375,
+            10.75,
+            10.625
+          ],
+          "top2_margin": 4.375
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            522,
+            9902
+          ],
+          "logits": [
+            19.75,
+            15.5625,
+            11.125,
+            10.5625,
+            10.3125
+          ],
+          "top2_margin": 4.1875
+        }
+      }
+    },
+    {
+      "step": 14,
+      "history_length": 526,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.265625,
+        "mean_abs": 0.045660730451345444,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.265625,
+        "mean_abs": 0.045660730451345444,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            7808
+          ],
+          "logits": [
+            23.0,
+            19.75,
+            15.0625,
+            14.4375,
+            13.9375
+          ],
+          "top2_margin": 3.25
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            7808
+          ],
+          "logits": [
+            23.125,
+            19.875,
+            15.25,
+            14.5,
+            13.9375
+          ],
+          "top2_margin": 3.25
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            7808
+          ],
+          "logits": [
+            23.0,
+            19.75,
+            15.0625,
+            14.4375,
+            13.9375
+          ],
+          "top2_margin": 3.25
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            7808
+          ],
+          "logits": [
+            23.125,
+            19.875,
+            15.25,
+            14.5,
+            13.9375
+          ],
+          "top2_margin": 3.25
+        }
+      }
+    },
+    {
+      "step": 15,
+      "history_length": 527,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.3125,
+        "mean_abs": 0.0455467514693737,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.3125,
+        "mean_abs": 0.0455467514693737,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            3989
+          ],
+          "logits": [
+            21.375,
+            16.875,
+            11.5,
+            11.1875,
+            11.0625
+          ],
+          "top2_margin": 4.5
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            3989
+          ],
+          "logits": [
+            21.25,
+            16.75,
+            11.5,
+            11.0625,
+            11.0625
+          ],
+          "top2_margin": 4.5
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            3989
+          ],
+          "logits": [
+            21.375,
+            16.875,
+            11.5,
+            11.1875,
+            11.0625
+          ],
+          "top2_margin": 4.5
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            3989
+          ],
+          "logits": [
+            21.25,
+            16.75,
+            11.5,
+            11.0625,
+            11.0625
+          ],
+          "top2_margin": 4.5
+        }
+      }
+    },
+    {
+      "step": 16,
+      "history_length": 528,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.375,
+        "mean_abs": 0.04962573200464249,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.375,
+        "mean_abs": 0.04962573200464249,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            7808
+          ],
+          "logits": [
+            23.75,
+            20.25,
+            15.6875,
+            15.4375,
+            14.5
+          ],
+          "top2_margin": 3.5
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            7808
+          ],
+          "logits": [
+            23.75,
+            20.25,
+            15.5,
+            15.375,
+            14.375
+          ],
+          "top2_margin": 3.5
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            7808
+          ],
+          "logits": [
+            23.75,
+            20.25,
+            15.6875,
+            15.4375,
+            14.5
+          ],
+          "top2_margin": 3.5
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            7808
+          ],
+          "logits": [
+            23.75,
+            20.25,
+            15.5,
+            15.375,
+            14.375
+          ],
+          "top2_margin": 3.5
+        }
+      }
+    },
+    {
+      "step": 17,
+      "history_length": 529,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.265625,
+        "mean_abs": 0.06398863345384598,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.265625,
+        "mean_abs": 0.06398863345384598,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            3989,
+            63,
+            90716
+          ],
+          "logits": [
+            21.5,
+            16.75,
+            11.6875,
+            11.625,
+            11.1875
+          ],
+          "top2_margin": 4.75
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            3989,
+            63,
+            90716
+          ],
+          "logits": [
+            21.5,
+            16.75,
+            11.625,
+            11.5625,
+            11.1875
+          ],
+          "top2_margin": 4.75
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            3989,
+            63,
+            90716
+          ],
+          "logits": [
+            21.5,
+            16.75,
+            11.6875,
+            11.625,
+            11.1875
+          ],
+          "top2_margin": 4.75
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            3989,
+            63,
+            90716
+          ],
+          "logits": [
+            21.5,
+            16.75,
+            11.625,
+            11.5625,
+            11.1875
+          ],
+          "top2_margin": 4.75
+        }
+      }
+    },
+    {
+      "step": 18,
+      "history_length": 530,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.25,
+        "mean_abs": 0.042369600385427475,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.25,
+        "mean_abs": 0.042369600385427475,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            7808
+          ],
+          "logits": [
+            24.0,
+            20.25,
+            16.0,
+            15.1875,
+            14.25
+          ],
+          "top2_margin": 3.75
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            7808
+          ],
+          "logits": [
+            24.125,
+            20.375,
+            16.125,
+            15.3125,
+            14.3125
+          ],
+          "top2_margin": 3.75
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            7808
+          ],
+          "logits": [
+            24.0,
+            20.25,
+            16.0,
+            15.1875,
+            14.25
+          ],
+          "top2_margin": 3.75
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            7808
+          ],
+          "logits": [
+            24.125,
+            20.375,
+            16.125,
+            15.3125,
+            14.3125
+          ],
+          "top2_margin": 3.75
+        }
+      }
+    },
+    {
+      "step": 19,
+      "history_length": 531,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.2607421875,
+        "mean_abs": 0.04420291632413864,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.2607421875,
+        "mean_abs": 0.04420291632413864,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            3989,
+            90716
+          ],
+          "logits": [
+            20.875,
+            16.5,
+            11.4375,
+            11.1875,
+            10.9375
+          ],
+          "top2_margin": 4.375
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            3989,
+            90716
+          ],
+          "logits": [
+            21.0,
+            16.5,
+            11.375,
+            11.25,
+            10.9375
+          ],
+          "top2_margin": 4.5
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            3989,
+            90716
+          ],
+          "logits": [
+            20.875,
+            16.5,
+            11.4375,
+            11.1875,
+            10.9375
+          ],
+          "top2_margin": 4.375
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            3989,
+            90716
+          ],
+          "logits": [
+            21.0,
+            16.5,
+            11.375,
+            11.25,
+            10.9375
+          ],
+          "top2_margin": 4.5
+        }
+      }
+    },
+    {
+      "step": 20,
+      "history_length": 532,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.3041229248046875,
+        "mean_abs": 0.04988708347082138,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.3041229248046875,
+        "mean_abs": 0.04988708347082138,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            23.625,
+            19.875,
+            15.625,
+            15.1875,
+            13.875
+          ],
+          "top2_margin": 3.75
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            23.75,
+            20.0,
+            15.8125,
+            15.1875,
+            14.0
+          ],
+          "top2_margin": 3.75
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            23.625,
+            19.875,
+            15.625,
+            15.1875,
+            13.875
+          ],
+          "top2_margin": 3.75
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            23.75,
+            20.0,
+            15.8125,
+            15.1875,
+            14.0
+          ],
+          "top2_margin": 3.75
+        }
+      }
+    },
+    {
+      "step": 21,
+      "history_length": 533,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.234375,
+        "mean_abs": 0.039633940905332565,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.234375,
+        "mean_abs": 0.039633940905332565,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            90716,
+            3989
+          ],
+          "logits": [
+            20.625,
+            16.25,
+            11.25,
+            10.875,
+            10.875
+          ],
+          "top2_margin": 4.375
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            90716,
+            3989
+          ],
+          "logits": [
+            20.75,
+            16.375,
+            11.25,
+            10.875,
+            10.875
+          ],
+          "top2_margin": 4.375
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            90716,
+            3989
+          ],
+          "logits": [
+            20.625,
+            16.25,
+            11.25,
+            10.875,
+            10.875
+          ],
+          "top2_margin": 4.375
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            90716,
+            3989
+          ],
+          "logits": [
+            20.75,
+            16.375,
+            11.25,
+            10.875,
+            10.875
+          ],
+          "top2_margin": 4.375
+        }
+      }
+    },
+    {
+      "step": 22,
+      "history_length": 534,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.3359375,
+        "mean_abs": 0.07091841846704483,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.3359375,
+        "mean_abs": 0.07091841846704483,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            23.625,
+            19.625,
+            15.6875,
+            15.125,
+            13.9375
+          ],
+          "top2_margin": 4.0
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            23.75,
+            19.625,
+            15.75,
+            15.1875,
+            13.9375
+          ],
+          "top2_margin": 4.125
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            23.625,
+            19.625,
+            15.6875,
+            15.125,
+            13.9375
+          ],
+          "top2_margin": 4.0
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            23.75,
+            19.625,
+            15.75,
+            15.1875,
+            13.9375
+          ],
+          "top2_margin": 4.125
+        }
+      }
+    },
+    {
+      "step": 23,
+      "history_length": 535,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.25,
+        "mean_abs": 0.05424753203988075,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.25,
+        "mean_abs": 0.05424753203988075,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            90716
+          ],
+          "logits": [
+            21.125,
+            16.375,
+            11.375,
+            11.125,
+            11.0
+          ],
+          "top2_margin": 4.75
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            90716
+          ],
+          "logits": [
+            21.125,
+            16.375,
+            11.1875,
+            11.125,
+            10.875
+          ],
+          "top2_margin": 4.75
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            90716
+          ],
+          "logits": [
+            21.125,
+            16.375,
+            11.375,
+            11.125,
+            11.0
+          ],
+          "top2_margin": 4.75
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            90716
+          ],
+          "logits": [
+            21.125,
+            16.375,
+            11.1875,
+            11.125,
+            10.875
+          ],
+          "top2_margin": 4.75
+        }
+      }
+    },
+    {
+      "step": 24,
+      "history_length": 536,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.2470703125,
+        "mean_abs": 0.036896754056215286,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.2470703125,
+        "mean_abs": 0.036896754056215286,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            24.25,
+            19.875,
+            16.0,
+            15.5,
+            14.375
+          ],
+          "top2_margin": 4.375
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            24.25,
+            19.75,
+            16.0,
+            15.625,
+            14.4375
+          ],
+          "top2_margin": 4.5
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            24.25,
+            19.875,
+            16.0,
+            15.5,
+            14.375
+          ],
+          "top2_margin": 4.375
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            24.25,
+            19.75,
+            16.0,
+            15.625,
+            14.4375
+          ],
+          "top2_margin": 4.5
+        }
+      }
+    },
+    {
+      "step": 25,
+      "history_length": 537,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.234375,
+        "mean_abs": 0.03864402696490288,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.234375,
+        "mean_abs": 0.03864402696490288,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            9902,
+            63,
+            90716
+          ],
+          "logits": [
+            21.375,
+            16.625,
+            11.375,
+            11.25,
+            10.875
+          ],
+          "top2_margin": 4.75
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            9902,
+            63,
+            90716
+          ],
+          "logits": [
+            21.375,
+            16.5,
+            11.375,
+            11.25,
+            10.875
+          ],
+          "top2_margin": 4.875
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            9902,
+            63,
+            90716
+          ],
+          "logits": [
+            21.375,
+            16.625,
+            11.375,
+            11.25,
+            10.875
+          ],
+          "top2_margin": 4.75
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            9902,
+            63,
+            90716
+          ],
+          "logits": [
+            21.375,
+            16.5,
+            11.375,
+            11.25,
+            10.875
+          ],
+          "top2_margin": 4.875
+        }
+      }
+    },
+    {
+      "step": 26,
+      "history_length": 538,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.28125,
+        "mean_abs": 0.045060835778713226,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.28125,
+        "mean_abs": 0.045060835778713226,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            24.625,
+            20.0,
+            16.125,
+            16.125,
+            14.75
+          ],
+          "top2_margin": 4.625
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            24.5,
+            19.875,
+            16.0,
+            16.0,
+            14.6875
+          ],
+          "top2_margin": 4.625
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            24.625,
+            20.0,
+            16.125,
+            16.125,
+            14.75
+          ],
+          "top2_margin": 4.625
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            18639,
+            13874,
+            24183
+          ],
+          "logits": [
+            24.5,
+            19.875,
+            16.0,
+            16.0,
+            14.6875
+          ],
+          "top2_margin": 4.625
+        }
+      }
+    },
+    {
+      "step": 27,
+      "history_length": 539,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.328125,
+        "mean_abs": 0.059737540781497955,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.328125,
+        "mean_abs": 0.059737540781497955,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            90716
+          ],
+          "logits": [
+            21.875,
+            16.875,
+            11.5,
+            11.375,
+            11.125
+          ],
+          "top2_margin": 5.0
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            90716
+          ],
+          "logits": [
+            21.875,
+            16.875,
+            11.4375,
+            11.375,
+            11.125
+          ],
+          "top2_margin": 5.0
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            90716
+          ],
+          "logits": [
+            21.875,
+            16.875,
+            11.5,
+            11.375,
+            11.125
+          ],
+          "top2_margin": 5.0
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            90716
+          ],
+          "logits": [
+            21.875,
+            16.875,
+            11.4375,
+            11.375,
+            11.125
+          ],
+          "top2_margin": 5.0
+        }
+      }
+    },
+    {
+      "step": 28,
+      "history_length": 540,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.2578125,
+        "mean_abs": 0.043657366186380386,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.2578125,
+        "mean_abs": 0.043657366186380386,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            24183
+          ],
+          "logits": [
+            24.5,
+            20.0,
+            16.375,
+            16.125,
+            14.8125
+          ],
+          "top2_margin": 4.5
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            24183
+          ],
+          "logits": [
+            24.5,
+            20.0,
+            16.5,
+            16.125,
+            14.875
+          ],
+          "top2_margin": 4.5
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            24183
+          ],
+          "logits": [
+            24.5,
+            20.0,
+            16.375,
+            16.125,
+            14.8125
+          ],
+          "top2_margin": 4.5
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            24183
+          ],
+          "logits": [
+            24.5,
+            20.0,
+            16.5,
+            16.125,
+            14.875
+          ],
+          "top2_margin": 4.5
+        }
+      }
+    },
+    {
+      "step": 29,
+      "history_length": 541,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.3203125,
+        "mean_abs": 0.06307397037744522,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.3203125,
+        "mean_abs": 0.06307397037744522,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            90716,
+            3989
+          ],
+          "logits": [
+            21.875,
+            17.0,
+            11.6875,
+            11.25,
+            11.1875
+          ],
+          "top2_margin": 4.875
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            90716,
+            3989
+          ],
+          "logits": [
+            21.875,
+            16.875,
+            11.5625,
+            11.25,
+            11.1875
+          ],
+          "top2_margin": 5.0
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            90716,
+            3989
+          ],
+          "logits": [
+            21.875,
+            17.0,
+            11.6875,
+            11.25,
+            11.1875
+          ],
+          "top2_margin": 4.875
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            90716,
+            3989
+          ],
+          "logits": [
+            21.875,
+            16.875,
+            11.5625,
+            11.25,
+            11.1875
+          ],
+          "top2_margin": 5.0
+        }
+      }
+    },
+    {
+      "step": 30,
+      "history_length": 542,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.328125,
+        "mean_abs": 0.05927637219429016,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.328125,
+        "mean_abs": 0.05927637219429016,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            24183
+          ],
+          "logits": [
+            24.5,
+            19.625,
+            16.375,
+            16.0,
+            14.875
+          ],
+          "top2_margin": 4.875
+        },
+        "custom_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            24183
+          ],
+          "logits": [
+            24.625,
+            19.75,
+            16.5,
+            16.125,
+            14.875
+          ],
+          "top2_margin": 4.875
+        },
+        "hf_full": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            24183
+          ],
+          "logits": [
+            24.5,
+            19.625,
+            16.375,
+            16.0,
+            14.875
+          ],
+          "top2_margin": 4.875
+        },
+        "hf_cache": {
+          "ids": [
+            3989,
+            19324,
+            13874,
+            18639,
+            24183
+          ],
+          "logits": [
+            24.625,
+            19.75,
+            16.5,
+            16.125,
+            14.875
+          ],
+          "top2_margin": 4.875
+        }
+      }
+    },
+    {
+      "step": 31,
+      "history_length": 543,
+      "custom_full_vs_hf_full": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_cache_vs_hf_cache": {
+        "exact": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "same_argmax": true
+      },
+      "custom_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.28125,
+        "mean_abs": 0.058296408504247665,
+        "same_argmax": true
+      },
+      "hf_full_vs_cache": {
+        "exact": false,
+        "max_abs": 0.28125,
+        "mean_abs": 0.058296408504247665,
+        "same_argmax": true
+      },
+      "top5": {
+        "custom_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            90716
+          ],
+          "logits": [
+            22.0,
+            16.875,
+            11.4375,
+            11.375,
+            11.25
+          ],
+          "top2_margin": 5.125
+        },
+        "custom_cache": {
+          "ids": [
+            13874,
+            73594,
+            9902,
+            63,
+            90716
+          ],
+          "logits": [
+            22.0,
+            16.75,
+            11.375,
+            11.3125,
+            11.125
+          ],
+          "top2_margin": 5.25
+        },
+        "hf_full": {
+          "ids": [
+            13874,
+            73594,
+            63,
+            9902,
+            90716
+          ],
+          "logits": [
+            22.0,
+            16.875,
+            11.4375,
+            11.375,
+            11.25
+          ],
+          "top2_margin": 5.125
+        },
+        "hf_cache": {
+          "ids": [
+            13874,
+            73594,
+            9902,
+            63,
+            90716
+          ],
+          "logits": [
+            22.0,
+            16.75,
+            11.375,
+            11.3125,
+            11.125
+          ],
+          "top2_margin": 5.25
+        }
+      }
+    }
+  ],
+  "full_recompute_output_ids": [
+    198,
+    13874,
+    19324,
+    13874,
+    3989,
+    13874,
+    3989,
+    13874,
+    3989,
+    13874,
+    3989,
+    13874,
+    3989,
+    13874,
+    3989,
+    13874,
+    3989,
+    13874,
+    3989,
+    13874,
+    3989,
+    13874,
+    3989,
+    13874,
+    3989,
+    13874,
+    3989,
+    13874,
+    3989,
+    13874,
+    3989,
+    13874
+  ],
+  "first_argmax_divergence": 1,
+  "custom_matches_hf_both_paths_exactly": true
+}

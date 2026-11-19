@@ -1,0 +1,14 @@
+{
+  "budget_bytes": 67108864,
+  "page_size": 16,
+  "available_pages": 36,
+  "peak_pages_per_trace": 7,
+  "paged_trace_copies": 5,
+  "paged_peak_requests": 10,
+  "fixed_slots": {
+    "87": 6,
+    "128": 4,
+    "256": 2,
+    "512": 1
+  }
+}
